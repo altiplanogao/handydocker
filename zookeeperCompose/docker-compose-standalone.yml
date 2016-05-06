@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+
+  zookeeper:
+    image: jplock/zookeeper
+    hostname: zoo
+    volumes : 
+     - ./vol/conf/zk-standalone:/opt/zookeeper/conf:ro
+     - ./vol/data/zk-standalone:/tmp/zookeeper

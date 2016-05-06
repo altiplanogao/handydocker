@@ -1,0 +1,28 @@
+version: '2'
+
+services:
+
+  zookeeper1:
+    image: jplock/zookeeper
+    container_name: zoo1
+    hostname: zoo1
+    volumes : 
+     - ./vol/conf/zk-cluster:/opt/zookeeper/conf:ro
+     - ./vol/data/zk-cluster/zoo1:/tmp/zookeeper
+
+  zookeeper2:
+    image: jplock/zookeeper
+    container_name: zoo2
+    hostname: zoo2
+    volumes : 
+     - ./vol/conf/zk-cluster:/opt/zookeeper/conf:ro
+     - ./vol/data/zk-cluster/zoo2:/tmp/zookeeper
+
+  zookeeper3:
+    image: jplock/zookeeper
+    container_name: zoo3
+    hostname: zoo3
+    volumes : 
+     - ./vol/conf/zk-cluster:/opt/zookeeper/conf:ro
+     - ./vol/data/zk-cluster/zoo3:/tmp/zookeeper
+

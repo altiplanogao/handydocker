@@ -1,0 +1,5 @@
+Run standalone zookeeper:
+docker-compose -f docker-compose-standalone.yml up
+
+Run cluster zookeeper:
+docker-compose up
